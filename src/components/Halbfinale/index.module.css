@@ -1,0 +1,59 @@
+.HFFull {
+  width: 100%;
+  grid-column: 1 / span 7;
+  background-color: #E6D2B5;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 4px;
+  border-radius: 20px;
+}
+
+.HFWorld {
+  width: 100%;
+  grid-column: 1 / span 3;
+  background-color: #E6D2B5;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 4px;
+  border-radius: 20px;
+}
+
+.HFEuro {
+  width: 100%;
+  grid-column: 1 / span 3;
+  background-color: #E6D2B5;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  padding: 4px;
+  border-radius: 20px;
+}
+
+@media screen and (min-width: 1000px) {
+  .HFWorld {
+    grid-column: 1 / span 5;
+  }
+  .HFEuro {
+    grid-column: 1 / span 7;
+  }
+}
+
+.h3 {
+  text-align: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.table {
+  width: 100%;
+}
+
+.team {
+  width: 25%;
+}
+
+.result {
+  width: 50%;
+  font-size: 14px;
+}
