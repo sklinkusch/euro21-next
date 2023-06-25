@@ -1,0 +1,13 @@
+.large {
+  height: 21px;
+  max-width: 30px;
+  min-width: 21px;
+  margin-right: 8px;
+}
+
+.small {
+  height: 14px;
+  max-width: 22px;
+  min-width: 14px;
+  margin-right: 8px;
+}
