@@ -21,7 +21,12 @@
 		"WorldCup": "FIFA Weltmeisterschaft",
 		"Place3": "Spiel um Platz 3",
 		"Back": "Hauptseite",
-		"SocTurn": "Hauptseite"
+		"SocTurn": "Hauptseite",
+		"Overview": "Übersicht",
+		"EuroMen": "Europameisterschaft der Männer",
+		"EuroWomen": "Europameisterschaft der Frauen",
+		"WCMen": "Weltmeisterschaft der Männer",
+		"WCWomen": "Weltmeisterschaft der Frauen"
 	},
 	"en": {
 		"EChampion": "European Champion",
@@ -45,7 +50,12 @@
 		"WorldCup": "FIFA World Cup",
 		"Place3": "Third place play-off",
 		"Back": "Main Page",
-		"SocTurn": "Main Page"
+		"SocTurn": "Main Page",
+		"Overview": "Overview",
+		"EuroMen": "Men's Euro",
+		"EuroWomen": "Women's Euro",
+		"WCMen": "Men's World Cup",
+		"WCWomen": "Women's World Cup"
 	},
 	"es": {
 		"EChampion": "Campéon",
@@ -69,7 +79,12 @@
 		"WorldCup": "FIFA Copa Mundial",
 		"Place3": "Tercer puesto",
 		"Back": "Portada",
-		"SocTurn": "Portada"
+		"SocTurn": "Portada",
+		"Overview": "Resumen",
+		"EuroMen": "Eurocopa",
+		"EuroWomen": "Eurocopa Femenina",
+		"WCMen": "Copa Mundial",
+		"WCWomen": "Copa Mundial Femenina"
 	},
 	"fr": {
 		"EChampion": "Vainqueur",
@@ -93,7 +108,12 @@
 		"WorldCup": "FIFA Coupe du Monde",
 		"Place3": "Match pour la 3e place",
 		"Back": "Accueil",
-		"SocTurn": "Accueil"
+		"SocTurn": "Accueil",
+		"Overview": "Exposé",
+		"EuroMen": "Championnat d'Europe",
+		"EuroWomen": "Championnat d'Europe féminin",
+		"WCMen": "Coupe du Monde",
+		"WCWomen": "Coupe du Monde féminine"
 	},
 	"it": {
 		"EChampion": "Vincitore",
@@ -117,7 +137,12 @@
 		"WorldCup": "FIFA Campionato mondiale",
 		"Place3": "Finale 3o - 4o posto",
 		"Back": "Pagina principale",
-		"SocTurn": "Pagina principale"
+		"SocTurn": "Pagina principale",
+		"Overview": "Sommario",
+		"EuroMen": "Campionato europeo",
+		"EuroWomen": "Campionato europeo femminile",
+		"WCMen": "Campionato mondiale",
+		"WCWomen": "Campionato mondiale femminile"
 	},
 	"pl": {
 		"EChampion": "Mistrza Europy",
@@ -141,7 +166,13 @@
 		"WorldCup": "FIFA Mistrzostwa świata",
 		"Place3": "Mecz o 3. miejsce",
 		"Back": "Strona główna",
-		"SocTurn": "Strona główna"
+		"SocTurn": "Strona główna",
+		"Overview": "Przegląd",
+		"EuroMen": "Mistrzostwa Europy",
+		"EuroWomen": "Mistrzostwa Europy kobiet",
+		"WCMen": "Mistrzostwa świata",
+		"WCWomen": "Mistrzostwa świata kobiet"
+		
 	},
 	"pt": {
 		"EChampion": "Campeão",
@@ -165,6 +196,11 @@
 		"WorldCup": "FIFA Copa do Mundo",
 		"Place3": "Disputa pelo terceiro lugar",
 		"Back": "Página principal",
-		"SocTurn": "Página principal"
+		"SocTurn": "Página principal",
+		"Overview": "Vista geral",
+		"EuroMen": "Campeonato Europeu",
+		"EuroWomen": "Campeonato Europeu Feminino",
+		"WCMen": "Copa do Mundo",
+		"WCWomen": "Copa do Mundo Feminina"
 	}
 }
