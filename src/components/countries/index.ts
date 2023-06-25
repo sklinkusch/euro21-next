@@ -1,3 +1,4 @@
+'use client'
 type Participant = { [key: string]: string }
 type Participants = { [key: string]: Participant }
 type Locale = { [key: string]: string }
