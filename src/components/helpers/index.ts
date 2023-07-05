@@ -89,20 +89,6 @@ export function getAssociation16(winningCombination: string) {
   }
 }
 
-export const getColor = (number: number) => {
-  switch (number) {
-    case 0: return "#7AACAC"
-    case 1: return "#CBD0CC"
-    case 2: return "#ADFF2F"
-    case 3: return "#E6D2B5"
-    case 4: return "#EAF044"
-    case 5: return "#D79FA6"
-    case 6: return "#FDDEB7"
-    case 7: return "#CACACA"
-    default: return "bg"
-  }
-}
-
 export const getKoTeam = (matchArray: MatchArray, indexMA: number, teamsA: Team | string, indexTA: number, teamsB: Team | string, indexTB: number) => {
   const teamAGoal = Array.isArray(matchArray) && typeof indexMA === "number" 
     ? matchArray[indexMA].goals[0] 
