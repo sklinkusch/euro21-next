@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import FlagSet from '../FlagSet'
 import { localeName as locales } from '../countries'
