@@ -21,7 +21,7 @@ type FlagSetProps = {
   large?: boolean
 }
 
-function FlagWrapper({ team, participant, large = false }: FlagWrapperProps) {
+export function FlagWrapper({ team, participant, large = false }: FlagWrapperProps) {
   const className = large ? styles.large : styles.small
   switch(team) {
     case "GB-NIR":
