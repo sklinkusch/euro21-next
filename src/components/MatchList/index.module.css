@@ -1,0 +1,94 @@
+.matchList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.matchList_1, .matchList_2, .matchList_3, .matchList_4 {
+  composes: matchList;
+}
+
+@media screen and (min-width: 420px) {
+  .matchList_1 {
+    grid-template-columns: 1fr;
+  }
+  .matchList_3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .matchList_4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.group_0, .group_1, .group_2, .group_3, .group_4, .group_5, .group_6, .group_7 {
+  width: 100%;
+  margin: 4px;
+  padding: 2px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.group_0 {
+  background-color: #7AACAC;
+}
+
+.group_1 {
+  background-color: #CBC0CC;
+}
+
+.group_2 {
+  background-color: #ADFF2F;
+}
+
+.group_3 {
+  background-color: #E6D2B5;
+}
+
+.group_4 {
+  background-color: #EAF044;
+}
+
+.group_5 {
+  background-color: #D79FA6;
+}
+
+.group_6 {
+  background-color: #FDDEB7;
+}
+
+.group_7 {
+  background-color: #CACACA;
+}
+
+.identifier {
+  font-size: 10vw;
+  width: 100%;
+  height: 100%;
+  font-weight: bold;
+  color: #ffffff70;
+  position: absolute;
+  z-index: 2;
+}
+
+.table {
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.row {
+  height: 14px;
+}
+
+.flag {
+  width: 25%;
+}
+
+.resultcell {
+  width: 50%;
+}
+
+.span {
+  font-style: 14px;
+  line-height: 16px;
+  color: black;
+}
