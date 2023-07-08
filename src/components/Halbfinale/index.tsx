@@ -2,7 +2,7 @@
 import React from 'react'
 import FlagSet from '../FlagSet'
 import { localeName as locales } from '../countries'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import styles from './index.module.css'
 
 type KOMatch = {
@@ -22,8 +22,8 @@ type HalbfinaleProps = {
 }
 
 function Halbfinale({ matches, full = false }: HalbfinaleProps) {
-  const location = useRouter()
-  const gridColumn = full ? styles.HFFull : location.pathname.includes("worldcup") ? styles.HFWorld : styles.HFEuro
+  const pathname = usePathname()
+  const gridColumn = full ? styles.HFFull : pathname.includes("worldcup") ? styles.HFWorld : styles.HFEuro
   return (
     <div className={gridColumn}>
       <h3 className={styles.h3}>

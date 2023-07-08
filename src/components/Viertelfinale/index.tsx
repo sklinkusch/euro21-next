@@ -2,7 +2,7 @@
 import React from 'react'
 import FlagSet from '../FlagSet'
 import { localeName as locales } from '../countries'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import styles from "./index.module.css"
 
 type KOMatch = {
@@ -22,7 +22,7 @@ type ViertelfinaleProps = {
 }
 
 function Viertelfinale({ matches, maxColumns }: ViertelfinaleProps) {
-  const location = useRouter()
+  const pathname = usePathname()
   let gridColumn = styles.VF2
   if (maxColumns) {
     switch (maxColumns) {
@@ -45,7 +45,7 @@ function Viertelfinale({ matches, maxColumns }: ViertelfinaleProps) {
         gridColumn = styles.VF8 
         break
       default:
-        if (location.pathname.includes("worldcup")) {
+        if (pathname.includes("worldcup")) {
           gridColumn = styles.VF4
         } else {
           gridColumn = styles.VF6
