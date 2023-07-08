@@ -6,7 +6,7 @@ import SU from "./SU.svg"
 import SU_CIS from "./SU_CIS.svg"
 import TW_OLY from "./TW_OLY.svg"
 import YU_SCG from "./YU_SCG.svg"
-import YU_SFR from "../images/YU_SFR.svg"
+import YU_SFR from "./YU_SFR.svg"
 import { participantName } from '../countries'
 import styles from "./index.module.css"
 
