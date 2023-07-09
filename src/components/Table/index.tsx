@@ -6,47 +6,6 @@ import { getGridValue } from '../helpers'
 import styles from './index.module.css'
 /* eslint-disable react-hooks/exhaustive-deps */
 
-type Dataset = {
-  team: string
-  points: number
-  goals: number
-  countergoals: number
-  goalDifference: number
-  fairPlay: number
-  victories: number
-}
-
-type Dataset3 = {
-  team: string
-  points: number
-  goals: number
-  countergoals: number
-  goalDifference: number
-  fairPlay: number
-  victories: number
-  group: string
-}
-
-type TableProps = {
-  table: Dataset[]
-  number: number
-  notifier: string
-}
-
-type TableThirdProps = {
-  third: Dataset3[]
-  emax?: number
-  maxColumns?: number
-}
-
-type Group = {
-  table: Dataset[]
-}
-
-type TableSetProps = {
-  matches: { [key: string]: Group }
-}
-
 export function GeneralTableSet({ matches }: TableSetProps) {
   const keys = Object.keys(matches)
   const sortedKeys = keys.sort()
@@ -121,7 +80,7 @@ function NewTable ({ table, number, notifier }: TableProps) {
           </tr>
         </thead>
         <tbody>
-          {table.map((dataset: Dataset, index: number) => {
+          {table.map((dataset: TableDataset, index: number) => {
             const { team, points, goals, countergoals, goalDifference, fairPlay } = dataset
             return (
               <tr key={index} className={styles.tablerow}>

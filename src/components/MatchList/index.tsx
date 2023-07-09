@@ -5,40 +5,6 @@ import { participantName as participants } from "../countries"
 import { getGridValue } from "../helpers"
 import styles from "./index.module.css"
 
-type SingleMatch = {
-  teams: string[]
-  goals: (number | null)[]
-  date: string
-  fairPlay: (number | null)[]
-}
-
-type TableDataset = {
-  team: string
-  points: number
-  rank: number
-  goals: number
-  countergoals: number
-  goalDifference: number
-  fairPlay: number
-  victories: number
-  ownMatches: SingleMatch[]
-}
-
-type Group = {
-  matches: SingleMatch[]
-  table: TableDataset[]
-}
-
-type MatchListProp = {
-  matches: {[key: string]: Group }
-}
-
-type GroupMatchListProp = {
-  matches: SingleMatch[]
-  number: number
-  identifier: string
-}
-
 export default function NewMatchList({ matches }: MatchListProp) {
   const keys = Object.keys(matches)
   const sortedKeys = keys.sort()

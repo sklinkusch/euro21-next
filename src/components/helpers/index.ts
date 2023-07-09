@@ -1,13 +1,3 @@
-type Match = {
-  goals: (number | null)[]
-}
-
-type MatchArray = Match[] | Match
-
-type Team = {
-  team: string
-}
-
 export function getGridValue(length: number) {
   switch (length) {
     case 16:
@@ -213,7 +203,7 @@ export const getLoser = (matchArray: MatchArray, indexMA: number, teamsA: Team |
   }
 }
 
-export const getChampion = (matchArray: Match, teamA: string, teamB: string) => {
+export const getChampion = (matchArray: MatchArray, teamA: string, teamB: string) => {
   const teamAGoal = matchArray.goals[0]
   const teamBGoal = matchArray.goals[1]
   if (typeof teamAGoal === 'number' && typeof teamBGoal === 'number') {

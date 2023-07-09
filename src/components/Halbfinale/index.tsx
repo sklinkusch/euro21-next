@@ -5,22 +5,6 @@ import { localeName as locales } from '../countries'
 import { usePathname } from 'next/navigation'
 import styles from './index.module.css'
 
-type KOMatch = {
-  teams: string[] | string[][]
-  goals: (number | null)[]
-  add: string | null
-  date: string
-}
-
-type HalbfinaleSingleProps = {
-  match: KOMatch
-}
-
-type HalbfinaleProps = {
-  matches: KOMatch[]
-  full?: boolean
-}
-
 function Halbfinale({ matches, full = false }: HalbfinaleProps) {
   const pathname = usePathname()
   const gridColumn = full ? styles.HFFull : pathname.includes("worldcup") ? styles.HFWorld : styles.HFEuro

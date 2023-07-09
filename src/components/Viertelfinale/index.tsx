@@ -5,22 +5,6 @@ import { localeName as locales } from '../countries'
 import { usePathname } from 'next/navigation'
 import styles from "./index.module.css"
 
-type KOMatch = {
-  teams: string[] | string[][]
-  goals: (number | null)[]
-  add: string | null
-  date: string
-}
-
-type ViertelfinaleSingleProps = {
-  match: KOMatch
-}
-
-type ViertelfinaleProps = {
-  matches: KOMatch[]
-  maxColumns?: number
-}
-
 function Viertelfinale({ matches, maxColumns }: ViertelfinaleProps) {
   const pathname = usePathname()
   let gridColumn = styles.VF2

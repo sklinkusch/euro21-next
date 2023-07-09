@@ -10,17 +10,6 @@ import YU_SFR from "./YU_SFR.svg"
 import { participantName } from '../countries'
 import styles from "./index.module.css"
 
-type FlagWrapperProps = {
-  team: string
-  participant: string
-  large?: boolean
-}
-
-type FlagSetProps = {
-  code: string[] | string
-  large?: boolean
-}
-
 export function FlagWrapper({ team, participant, large = false }: FlagWrapperProps) {
   const className = large ? styles.large : styles.small
   switch(team) {

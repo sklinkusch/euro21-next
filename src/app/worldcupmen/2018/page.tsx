@@ -12,48 +12,6 @@ import { localeName as locales } from '@/components/countries';
 import styles from "./page.module.css"
 /* eslint-disable react-hooks/exhaustive-deps */
 
-type SingleMatch = {
-  teams: string[]
-  goals: (number | null)[]
-  date: string
-  fairPlay: (number | null)[]
-}
-
-type KOMatch = {
-  teams: string[] | string[][]
-  goals: (number | null)[]
-  add: string | null
-  date: string
-}
-
-type TableDataset = {
-  team: string
-  points: number
-  rank: number
-  goals: number
-  countergoals: number
-  goalDifference: number
-  fairPlay: number
-  victories: number
-  ownMatches: SingleMatch[]
-}
-
-type Group = {
-  matches: SingleMatch[]
-  table: TableDataset[]
-}
-
-type Matches = {
-  host?: string[]
-  groups?: { [key: string]: Group}
-  AF?: KOMatch[]
-  VF?: KOMatch[]
-  HF?: KOMatch[]
-  '3P'?: KOMatch
-  F?: KOMatch
-  champion?: string[] | string
-}
-
 function WorldCup2018() {
   const [matches, setMatches] = useState<Matches>({})
   const [lang, setLang] = useState<string>("")

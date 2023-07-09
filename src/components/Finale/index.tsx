@@ -3,18 +3,7 @@ import FlagSet from '../FlagSet'
 import { localeName as locales } from '../countries'
 import styles from "./index.module.css"
 
-type Match = {
-  teams: string[] | string[][]
-  goals: (number | null)[]
-  add: string | null
-  date: string
-}
-
-type Props = {
-  match: Match
-}
-
-function Finale({ match }: Props) {
+function Finale({ match }: FinalProps) {
   return (
     <div className={styles.matchWrapper}>
       <h3 className={styles.title}>
@@ -31,7 +20,7 @@ function Finale({ match }: Props) {
   )
 }
 
-function Platz3({ match }: Props) {
+function Platz3({ match }: FinalProps) {
   return (
     <div className={styles.matchWrapper}>
       <h3 className={styles.title}>
@@ -48,7 +37,7 @@ function Platz3({ match }: Props) {
   )
 }
 
-function FinaleSingle({ match }: Props) {
+function FinaleSingle({ match }: FinalProps) {
   const { teams, goals, add, date } = match
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
   const formattedDate = date ? new Date(date).toLocaleString(navigator.language, { year: "2-digit", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: tz }) : null

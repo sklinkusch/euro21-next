@@ -1,9 +1,4 @@
 'use client'
-type Participant = { [key: string]: string }
-type Participants = { [key: string]: Participant }
-type Locale = { [key: string]: string }
-type Locales = { [key: string]: Locale }
-
 const participants: Participants = require("./teams.json")
 const locales: Locales = require("./locales.json")
 const lang = navigator.language 

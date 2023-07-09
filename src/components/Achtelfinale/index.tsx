@@ -4,22 +4,6 @@ import FlagSet from '../FlagSet'
 import { localeName as locales } from '../countries'
 import styles from './index.module.css'
 
-type KOMatch = {
-  teams: string[] | string[][]
-  goals: (number | null)[]
-  add: string | null
-  date: string
-}
-
-type AchtelfinaleProps = {
-  matches: KOMatch[]
-  maxColumn?: number
-}
-
-type AchtelfinaleSingleProps = {
-  match: KOMatch
-}
-
 function Achtelfinale({ matches, maxColumn }: AchtelfinaleProps) {
   let gridColumn = styles.AF4
   if (maxColumn) {
