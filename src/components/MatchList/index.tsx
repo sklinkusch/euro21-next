@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { FlagWrapper } from '../FlagSet'
 import { participantName as participants } from "../countries"
 import { getGridValue } from "../helpers"
@@ -23,6 +23,13 @@ export default function NewMatchList({ matches }: MatchListProp) {
 }
 
 function GroupMatchList({ matches, number, identifier }: GroupMatchListProp) {
+  const [lang, setLang] = useState<string>("")
+  useEffect(() => {
+    if (navigator && navigator.language) {
+      const mylang = navigator.language.substring(0,2)
+      setLang(mylang)
+    }
+  },[])
   const classKey = `group_${number}`
   const cssClass = styles[classKey]
   return (
@@ -38,9 +45,8 @@ function GroupMatchList({ matches, number, identifier }: GroupMatchListProp) {
             const bGoals = typeof goalsB === "number" ? `${goalsB}` : "-"
             const aParticipants = participants(teamA) ? participants(teamA) : teamA
             const bParticipants = participants(teamB) ? participants(teamB) : teamB
-            const language = navigator.language
             const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
-            const formattedDate = date ? new Date(date).toLocaleString(language, { year: "2-digit", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: tz }) : null
+            const formattedDate = date ? new Date(date).toLocaleString(lang, { year: "2-digit", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: tz }) : null
             return (
               <tr key={index} className={styles.row}>
                 <td className={styles.flag}><FlagWrapper team={teamA} participant={aParticipants} /></td>

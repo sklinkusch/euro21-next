@@ -1,4 +1,5 @@
 'use client'
+const dynamic = require('next/dynamic')
 const participants: Participants = require("./teams.json")
 const locales: Locales = require("./locales.json")
 const lang = navigator.language 

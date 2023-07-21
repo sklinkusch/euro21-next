@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import FlagSet from '../FlagSet'
 import { localeName as locales } from '../countries'
 import styles from "./index.module.css"
@@ -38,9 +38,16 @@ function Platz3({ match }: FinalProps) {
 }
 
 function FinaleSingle({ match }: FinalProps) {
+  const [lang, setLang] = useState<string>("")
+  useEffect(() => {
+    if (navigator && navigator.language) {
+      const mylang = navigator.language.substring(0,2)
+      setLang(mylang)
+    }
+  },[])
   const { teams, goals, add, date } = match
   const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
-  const formattedDate = date ? new Date(date).toLocaleString(navigator.language, { year: "2-digit", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: tz }) : null
+  const formattedDate = date ? new Date(date).toLocaleString(lang, { year: "2-digit", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: tz }) : null
   return (
     <React.Fragment>
       <td className={styles.team}><FlagSet code={teams[0]} /></td>
