@@ -20,5 +20,8 @@
     "react-dom": "18.2.0",
     "react-world-flags": "^1.5.1",
     "typescript": "5.1.3"
+  },
+  "engines": {
+    "node": "~18.15.0"
   }
 }
