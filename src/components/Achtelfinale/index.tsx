@@ -5,7 +5,7 @@ import { localeName as locales } from '../countries'
 import styles from './index.module.css'
 
 function Achtelfinale({ matches, maxColumn }: AchtelfinaleProps) {
-  const [lang, setLang] = useState<string>("")
+  const [lang, setLang] = useState<string>("en")
   useEffect(() => {
     if (navigator && navigator.language) {
       const mylang = navigator.language.substring(0,2)
@@ -58,7 +58,7 @@ function Achtelfinale({ matches, maxColumn }: AchtelfinaleProps) {
 }
 
 function AchtelfinaleSingle({ match}: AchtelfinaleSingleProps) {
-  const [lang, setLang] = useState<string>("")
+  const [lang, setLang] = useState<string>("en")
   useEffect(() => {
     if (navigator && navigator.language) {
       const mylang = navigator.language.substring(0,2)

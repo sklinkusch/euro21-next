@@ -14,10 +14,10 @@ import styles from "./page.module.css"
 
 function WorldCup2022() {
   const [matches, setMatches] = useState<Matches>({})
-  const [lang, setLang] = useState<string>("")
+  const [lang, setLang] = useState<string>("en")
   useEffect(() => {
     async function fetchData () {
-      const longLang = navigator && "language" in navigator ? navigator.language : ""
+      const longLang = navigator && "language" in navigator ? navigator.language : "en"
       const mylang = longLang.length > 0 ? longLang.substring(0,2) : "en"
       const response = await fetch(`https://euro21-api.vercel.app/worldcupmen?year=2022&lang=${mylang}`)
       const data = await response.json()

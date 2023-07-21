@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation'
 import styles from "./index.module.css"
 
 function Viertelfinale({ matches, maxColumns }: ViertelfinaleProps) {
-  const [lang, setLang] = useState<string>("")
+  const [lang, setLang] = useState<string>("en")
   useEffect(() => {
     if (navigator && navigator.language) {
       const mylang = navigator.language.substring(0,2)
@@ -62,7 +62,7 @@ function Viertelfinale({ matches, maxColumns }: ViertelfinaleProps) {
 }
 
 function ViertelfinaleSingle({ match }: ViertelfinaleSingleProps) {
-  const [lang, setLang] = useState<string>("")
+  const [lang, setLang] = useState<string>("en")
   useEffect(() => {
     if (navigator && navigator.language) {
       const mylang = navigator.language.substring(0,2)

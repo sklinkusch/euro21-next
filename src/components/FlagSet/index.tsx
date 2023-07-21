@@ -43,7 +43,7 @@ export function FlagWrapper({ team, participant, large = false }: FlagWrapperPro
 }
 
 export default function FlagSet({code, large = false }: FlagSetProps){
-  const [lang, setLang] = useState<string>("")
+  const [lang, setLang] = useState<string>("en")
   useEffect(() => {
     if (navigator && navigator.language) {
       const mylang = navigator.language.substring(0,2)

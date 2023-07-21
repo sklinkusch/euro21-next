@@ -14,7 +14,7 @@ import styles from "./page.module.css"
 
 function WorldCup2019() {
   const [matches, setMatches] = useState<Matches>({})
-  const [lang, setLang] = useState<string>("")
+  const [lang, setLang] = useState<string>("en")
   useEffect(() => {
     async function fetchData () {
       const longLang = navigator && "language" in navigator ? navigator.language : ""

@@ -23,7 +23,7 @@ export default function NewMatchList({ matches }: MatchListProp) {
 }
 
 function GroupMatchList({ matches, number, identifier }: GroupMatchListProp) {
-  const [lang, setLang] = useState<string>("")
+  const [lang, setLang] = useState<string>("en")
   useEffect(() => {
     if (navigator && navigator.language) {
       const mylang = navigator.language.substring(0,2)

@@ -5,7 +5,7 @@ import { localeName as locales } from '@/components/countries'
 import Link from 'next/link'
 
 export default function Home() {
-  const [lang, setLang] = useState<string>("")
+  const [lang, setLang] = useState<string>("en")
   useEffect(() => {
     const mylang = navigator && navigator.language ? navigator.language.substring(0,2) : "en"
     setLang(mylang)

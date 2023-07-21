@@ -4,7 +4,7 @@ import { localeName as locales } from '../countries'
 import styles from "./index.module.css"
 
 function Finale({ match }: FinalProps) {
-  const [lang, setLang] = useState<string>("")
+  const [lang, setLang] = useState<string>("en")
   useEffect(() => {
     if (navigator && navigator.language) {
       const mylang = navigator.language.substring(0,2)
@@ -28,7 +28,7 @@ function Finale({ match }: FinalProps) {
 }
 
 function Platz3({ match }: FinalProps) {
-  const [lang, setLang] = useState<string>("")
+  const [lang, setLang] = useState<string>("en")
   useEffect(() => {
     if (navigator && navigator.language) {
       const mylang = navigator.language.substring(0,2)
@@ -52,7 +52,7 @@ function Platz3({ match }: FinalProps) {
 }
 
 function FinaleSingle({ match }: FinalProps) {
-  const [lang, setLang] = useState<string>("")
+  const [lang, setLang] = useState<string>("en")
   useEffect(() => {
     if (navigator && navigator.language) {
       const mylang = navigator.language.substring(0,2)

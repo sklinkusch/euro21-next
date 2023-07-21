@@ -36,7 +36,7 @@ export function GeneralTableSet({ matches }: TableSetProps) {
 }
 
 function NewTable ({ table, number, notifier }: TableProps) {
-  const [lang, setLang] = useState<string>("")
+  const [lang, setLang] = useState<string>("en")
   useEffect(() => {
     if (navigator && navigator.language) {
       const mylang = navigator.language.substring(0,2)
