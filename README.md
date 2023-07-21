@@ -1,6 +1,8 @@
 # euro21
 
-This project is the refactoring of the original euro21 App using NextJS.
+This project is the refactoring of the original euro21 App using NextJS. There
+is still work to do to make it contain all the tournaments the original app is
+containing.
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
