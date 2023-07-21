@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Flag from "react-world-flags"
 import GB_NIR from "./GB_NIR.svg"
@@ -43,18 +43,25 @@ export function FlagWrapper({ team, participant, large = false }: FlagWrapperPro
 }
 
 export default function FlagSet({code, large = false }: FlagSetProps){
+  const [lang, setLang] = useState<string>("")
+  useEffect(() => {
+    if (navigator && navigator.language) {
+      const mylang = navigator.language.substring(0,2)
+      setLang(mylang)
+    }
+  },[])
   if (typeof code === "object" && Array.isArray(code) && code.length > 0) {
     return (
       <React.Fragment>
         {code.map((singleCode, index) => (
-          <FlagWrapper key={index} team={singleCode} participant={participantName(singleCode)} large={large} />
+          <FlagWrapper key={index} team={singleCode} participant={participantName(singleCode, lang)} large={large} />
         ))}
       </React.Fragment>
     )
   }
   if (typeof code === 'string') {
     return (
-      <FlagWrapper team={code} participant={participantName(code)} large={large} />
+      <FlagWrapper team={code} participant={participantName(code, lang)} large={large} />
     )
   }
 }

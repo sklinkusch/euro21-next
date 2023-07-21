@@ -4,10 +4,17 @@ import { localeName as locales } from '../countries'
 import styles from "./index.module.css"
 
 function Finale({ match }: FinalProps) {
+  const [lang, setLang] = useState<string>("")
+  useEffect(() => {
+    if (navigator && navigator.language) {
+      const mylang = navigator.language.substring(0,2)
+      setLang(mylang)
+    }
+  },[])
   return (
     <div className={styles.matchWrapper}>
       <h3 className={styles.title}>
-        {locales("Final")}
+        {locales("Final", lang)}
       </h3>
       <table className={styles.table}>
         <tbody>
@@ -21,10 +28,17 @@ function Finale({ match }: FinalProps) {
 }
 
 function Platz3({ match }: FinalProps) {
+  const [lang, setLang] = useState<string>("")
+  useEffect(() => {
+    if (navigator && navigator.language) {
+      const mylang = navigator.language.substring(0,2)
+      setLang(mylang)
+    }
+  },[])
   return (
     <div className={styles.matchWrapper}>
       <h3 className={styles.title}>
-        {locales("Place3")}
+        {locales("Place3", lang)}
       </h3>
       <table className={styles.table}>
         <tbody>

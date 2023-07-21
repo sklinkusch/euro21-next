@@ -5,6 +5,13 @@ import { localeName as locales } from '../countries'
 import styles from './index.module.css'
 
 function Achtelfinale({ matches, maxColumn }: AchtelfinaleProps) {
+  const [lang, setLang] = useState<string>("")
+  useEffect(() => {
+    if (navigator && navigator.language) {
+      const mylang = navigator.language.substring(0,2)
+      setLang(mylang)
+    }
+  },[])
   let gridColumn = styles.AF4
   if (maxColumn) {
     switch (maxColumn) {
@@ -34,7 +41,7 @@ function Achtelfinale({ matches, maxColumn }: AchtelfinaleProps) {
   return (
     <div className={gridColumn}>
       <h3 className={styles.h3}>
-        {locales("Round16")}
+        {locales("Round16", lang)}
       </h3>
       <table className={styles.table}>
         <tbody>

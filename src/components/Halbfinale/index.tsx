@@ -6,12 +6,19 @@ import { usePathname } from 'next/navigation'
 import styles from './index.module.css'
 
 function Halbfinale({ matches, full = false }: HalbfinaleProps) {
+  const [lang, setLang] = useState<string>("")
+  useEffect(() => {
+    if (navigator && navigator.language) {
+      const mylang = navigator.language.substring(0,2)
+      setLang(mylang)
+    }
+  },[])
   const pathname = usePathname()
   const gridColumn = full ? styles.HFFull : pathname.includes("worldcup") ? styles.HFWorld : styles.HFEuro
   return (
     <div className={gridColumn}>
       <h3 className={styles.h3}>
-        {locales("Semifinal")}
+        {locales("Semifinal", lang)}
       </h3>
       <table className={styles.table}>
         <tbody>

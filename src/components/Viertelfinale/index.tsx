@@ -6,6 +6,13 @@ import { usePathname } from 'next/navigation'
 import styles from "./index.module.css"
 
 function Viertelfinale({ matches, maxColumns }: ViertelfinaleProps) {
+  const [lang, setLang] = useState<string>("")
+  useEffect(() => {
+    if (navigator && navigator.language) {
+      const mylang = navigator.language.substring(0,2)
+      setLang(mylang)
+    }
+  },[])
   const pathname = usePathname()
   let gridColumn = styles.VF2
   if (maxColumns) {
@@ -39,7 +46,7 @@ function Viertelfinale({ matches, maxColumns }: ViertelfinaleProps) {
   return (
     <div className={gridColumn}>
       <h3 className={styles.h3}>
-        {locales("Quarterfinal")}
+        {locales("Quarterfinal", lang)}
       </h3>
       <table className={styles.table}>
         <tbody>

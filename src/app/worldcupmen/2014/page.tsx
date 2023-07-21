@@ -16,9 +16,6 @@ function WorldCup2014() {
   const [matches, setMatches] = useState<Matches>({})
   const [lang, setLang] = useState<string>("")
   useEffect(() => {
-    document.title = `${locales("WorldCup")} 2014`
-  }, [])
-  useEffect(() => {
     async function fetchData () {
       const longLang = navigator && "language" in navigator ? navigator.language : ""
       const mylang = longLang.length > 0 ? longLang.substring(0,2) : "en"
@@ -26,13 +23,14 @@ function WorldCup2014() {
       const data = await response.json()
       setMatches(await data)
       setLang(await mylang)
+      document.title = `${locales("WorldCup", mylang)} 2014`
     }
     fetchData()
   },[])
   return (
     <div className={styles.App}>
       <h1 className={styles.h1} lang={lang}>
-        <span>{locales("WorldCup")}</span>{" "}
+        <span>{locales("WorldCup", lang)}</span>{" "}
         <span>2014</span>
         {matches.hasOwnProperty("host") && matches.host && (<FlagSet code={matches.host} large={true} />)}
       </h1>
@@ -52,10 +50,10 @@ function WorldCup2014() {
         </main>
       </header>
         {matches.hasOwnProperty("champion") && matches.champion && <h2 className={styles.h2}>
-        {locales("WChampion")}: <FlagSet code={matches.champion} large={true} />
+        {locales("WChampion", lang)}: <FlagSet code={matches.champion} large={true} />
       </h2>}
       <div className={styles.linkcontainer}>
-        <Link href="/" className={styles.link}>{locales("Back")}</Link>
+        <Link href="/" className={styles.link}>{locales("Back", lang)}</Link>
       </div>
     </div>
   );

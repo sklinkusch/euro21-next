@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { FlagWrapper } from "../FlagSet"
 import { participantName as participants, localeName as locales } from '../countries'
 import { getGridValue } from '../helpers'
@@ -36,6 +36,13 @@ export function GeneralTableSet({ matches }: TableSetProps) {
 }
 
 function NewTable ({ table, number, notifier }: TableProps) {
+  const [lang, setLang] = useState<string>("")
+  useEffect(() => {
+    if (navigator && navigator.language) {
+      const mylang = navigator.language.substring(0,2)
+      setLang(mylang)
+    }
+  },[])
   let className = styles.tablemain
   switch (number) {
     case 0:
@@ -72,11 +79,11 @@ function NewTable ({ table, number, notifier }: TableProps) {
       <table className={styles.table}>
         <thead>
           <tr className={styles.tablerow}>
-            <td>{locales("Team")}</td>
-            <td>{locales("Pts")}</td>
-            <td>{locales("Difference")}</td>
-            <td>{locales("Goals")}</td>
-            <td>{locales("FairPlay")}</td>
+            <td>{locales("Team", lang)}</td>
+            <td>{locales("Pts", lang)}</td>
+            <td>{locales("Difference", lang)}</td>
+            <td>{locales("Goals", lang)}</td>
+            <td>{locales("FairPlay", lang)}</td>
           </tr>
         </thead>
         <tbody>
@@ -84,7 +91,7 @@ function NewTable ({ table, number, notifier }: TableProps) {
             const { team, points, goals, countergoals, goalDifference, fairPlay } = dataset
             return (
               <tr key={index} className={styles.tablerow}>
-                <td><FlagWrapper team={team} participant={participants(team)} /></td>
+                <td><FlagWrapper team={team} participant={participants(team, lang)} /></td>
                 <td>{points}</td>
                 <td>{goalDifference}</td>
                 <td>{goals}:{countergoals}</td>
@@ -101,6 +108,13 @@ function NewTable ({ table, number, notifier }: TableProps) {
 }
 
 export function TableThird({ third, emax, maxColumns }: TableThirdProps) {
+  const [lang, setLang] = useState<string>("")
+  useEffect(() => {
+    if (navigator && navigator.language) {
+      const mylang = navigator.language.substring(0,2)
+      setLang(mylang)
+    }
+  },[])
   const max = emax ? emax : 3
   let tableclass = styles.tablethird_2
   switch (maxColumns) {
@@ -129,12 +143,12 @@ export function TableThird({ third, emax, maxColumns }: TableThirdProps) {
     <table className={tableclass}>
       <thead>
         <tr>
-        <td>{locales("Group")}</td>
-        <td>{locales("Team")}</td>
-        <td>{locales("Pts")}</td>
-        <td>{locales("Victories")}</td>
-        <td>{locales("Difference")}</td>
-        <td>{locales("FairPlay")}</td>
+        <td>{locales("Group", lang)}</td>
+        <td>{locales("Team", lang)}</td>
+        <td>{locales("Pts", lang)}</td>
+        <td>{locales("Victories", lang)}</td>
+        <td>{locales("Difference", lang)}</td>
+        <td>{locales("FairPlay", lang)}</td>
         </tr>
       </thead>
       <tbody>
@@ -144,7 +158,7 @@ export function TableThird({ third, emax, maxColumns }: TableThirdProps) {
             return (
               <tr key={index}>
                 <td className={line}>{team.group}</td>
-                <td className={line}><FlagWrapper team={team.team} participant={participants(team.team)} /></td>
+                <td className={line}><FlagWrapper team={team.team} participant={participants(team.team, lang)} /></td>
                 <td className={line}>{team.points}</td>
                 <td className={line}>{team.victories}</td>
                 <td className={line}>{team.goalDifference}</td>

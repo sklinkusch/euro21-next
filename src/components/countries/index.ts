@@ -2,9 +2,8 @@
 const dynamic = require('next/dynamic')
 const participants: Participants = require("./teams.json")
 const locales: Locales = require("./locales.json")
-const lang = navigator.language 
 
-export const participantName = (code: string) => {
+export const participantName = (code: string, lang: string) => {
     if (typeof participants === 'object' && participants.hasOwnProperty(code)) {
       if( /^de/.test(lang)) {
         return participants[code]["de"]
@@ -26,7 +25,7 @@ export const participantName = (code: string) => {
     }
 }
 
-export const localeName = (code: string) => {
+export const localeName = (code: string, lang: string) => {
   if(code && typeof code === "string" && code != null && code !== "?") {
     if (/^de/.test(lang)) {
       return locales.de[code]

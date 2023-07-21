@@ -43,8 +43,8 @@ function GroupMatchList({ matches, number, identifier }: GroupMatchListProp) {
             const [goalsA, goalsB] = goals
             const aGoals = typeof goalsA === "number" ? `${goalsA}` : "-"
             const bGoals = typeof goalsB === "number" ? `${goalsB}` : "-"
-            const aParticipants = participants(teamA) ? participants(teamA) : teamA
-            const bParticipants = participants(teamB) ? participants(teamB) : teamB
+            const aParticipants = participants(teamA, lang) ? participants(teamA, lang) : teamA
+            const bParticipants = participants(teamB, lang) ? participants(teamB, lang) : teamB
             const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
             const formattedDate = date ? new Date(date).toLocaleString(lang, { year: "2-digit", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: tz }) : null
             return (
