@@ -133,11 +133,11 @@ export default function Home() {
       {
         link: "/worldcupwomen/2007",
         title: `${locales("WorldCup", lang)} 2007`
+      },
+      {
+        link: "/worldcupwomen/2003",
+        title: `${locales("WorldCup", lang)} 2003`
       }
-      // {
-      //   link: "/worldcupwomen/2003",
-      //   title: `${locales("WorldCup", lang)} 2003`
-      // },
       // {
       //   link: "/worldcupwomen/1999",
       //   title: `${locales("WorldCup", lang)} 1999`
