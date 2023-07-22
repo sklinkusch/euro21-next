@@ -38,7 +38,7 @@ function GroupMatchList({ matches, number, identifier }: GroupMatchListProp) {
       <table className={styles.table}>
         <tbody>
           {matches.map((match, index) =>{
-            const { teams, goals, date } = match 
+            const { teams, goals, date, place } = match 
             const [teamA, teamB] = teams 
             const [goalsA, goalsB] = goals
             const aGoals = typeof goalsA === "number" ? `${goalsA}` : "-"
@@ -48,11 +48,20 @@ function GroupMatchList({ matches, number, identifier }: GroupMatchListProp) {
             const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
             const formattedDate = date ? new Date(date).toLocaleString(lang, { year: "2-digit", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: tz }) : null
             return (
-              <tr key={index} className={styles.row}>
-                <td className={styles.flag}><FlagWrapper team={teamA} participant={aParticipants} /></td>
-                <td className={styles.flag}><FlagWrapper team={teamB} participant={bParticipants} /></td>
-                {typeof goalsA === 'number' && typeof goalsB === 'number' ? (<td className={styles.resultcell}><span className={styles.span}>{`${aGoals}:${bGoals}`}</span></td>) : formattedDate ? (<td className={styles.resultcell}><span className={styles.span}>{formattedDate}</span></td>) : (<td className={styles.resultcell}><span className={styles.span}>-:-</span></td>)}
-              </tr>
+              <React.Fragment key={index}>
+                {place && (<tr className={styles.smallrow}>
+                  <td colSpan={3}>
+                    <span>{place.city}</span>
+                    <FlagWrapper team={place?.country} participant={participants(place?.country, lang)} />
+                    {typeof goalsA === 'number' && typeof goalsB === 'number' && formattedDate && <span>{formattedDate}</span>}
+                  </td>
+                </tr>)}
+                <tr className={styles.row}>
+                  <td className={styles.flag}><FlagWrapper team={teamA} participant={aParticipants} /></td>
+                  <td className={styles.flag}><FlagWrapper team={teamB} participant={bParticipants} /></td>
+                  {typeof goalsA === 'number' && typeof goalsB === 'number' ? (<td className={styles.resultcell}><span className={styles.span}>{`${aGoals}:${bGoals}`}</span></td>) : formattedDate ? (<td className={styles.resultcell}><span className={styles.span}>{formattedDate}</span></td>) : (<td className={styles.resultcell}><span className={styles.span}>-:-</span></td>)}
+                </tr>
+              </React.Fragment>
             )
           })}
         </tbody>

@@ -79,6 +79,17 @@
   height: 14px;
 }
 
+.smallrow {
+  height: 10px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.smallrow img {
+  height: 10px !important;
+  margin-left: 4px;
+}
+
 .flag {
   width: 25%;
 }

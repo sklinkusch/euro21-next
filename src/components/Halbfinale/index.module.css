@@ -57,3 +57,14 @@
   width: 50%;
   font-size: 14px;
 }
+
+.smallrow {
+  height: 10px;
+  font-size: 10px;
+  line-height: 1;
+}
+
+.smallrow img {
+  height: 10px !important;
+  margin-left: 4px;
+}
