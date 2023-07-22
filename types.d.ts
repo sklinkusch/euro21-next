@@ -1,10 +1,16 @@
 // Matches
 
+type Place = {
+  city: string
+  country: string
+}
+
 type SingleMatch = {
   teams: string[]
   goals: (number | null)[]
   date: string
   fairPlay: (number | null)[]
+  place?: Place
 }
 
 type KOMatch = {
@@ -12,6 +18,7 @@ type KOMatch = {
   goals: (number | null)[]
   add: string | null
   date: string
+  place?: Place
 }
 
 // Table
