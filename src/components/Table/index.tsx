@@ -37,11 +37,45 @@ export function GeneralTableSet({ matches }: TableSetProps) {
 
 function NewTable ({ table, number, notifier }: TableProps) {
   const [lang, setLang] = useState<string>("en")
+  const [colors, setColors] = useState<string[]>([])
+  const [fcolors, setFColors] = useState<string[]>([])
   useEffect(() => {
     if (navigator && navigator.language) {
       const mylang = navigator.language.substring(0,2)
       setLang(mylang)
     }
+  },[])
+  useEffect(() => {
+    function getColors() {
+      const myColors = 
+        Array.isArray(table) && table.length > 0
+          ? table.map((team) => {
+              if (team.worst === 0)
+                return "linear-gradient(to bottom, #e6f0a340 0%, #d2e63840 50%, #c3d82540 51%, #dbf04340 100%)"
+              if (team.worst <= 1)
+                return "linear-gradient(to bottom, #f6f8f940 0%, #e5ebee40 50%, #d7dee340 51%, #f5f7f940 100%)"
+              if (team.best >= 2)
+                return "linear-gradient(to bottom, #ff301940 0%, #c4040440 100%)"
+              return "none"
+            })
+          : []
+      setColors(myColors)
+    }
+    function getFontColors() {
+      const myFColors =
+        Array.isArray(table) && table.length > 0
+          ? table.map((team) => {
+            if (team.worst <= 1)
+              return "black"
+            if (team.best >= 2)
+              return "white"
+            return "black"
+          })
+          : []
+      setFColors(myFColors)
+    }
+    getColors()
+    getFontColors()
   },[])
   let className = styles.tablemain
   switch (number) {
@@ -90,7 +124,7 @@ function NewTable ({ table, number, notifier }: TableProps) {
           {table.map((dataset: TableDataset, index: number) => {
             const { team, points, goals, countergoals, goalDifference, fairPlay } = dataset
             return (
-              <tr key={index} className={styles.tablerow}>
+              <tr key={index} className={styles.tablerow} style={{ background: colors[index] || "transparent", color: fcolors[index] ||"black" }}>
                 <td><FlagWrapper team={team} participant={participants(team, lang)} /></td>
                 <td>{points}</td>
                 <td>{goalDifference}</td>
