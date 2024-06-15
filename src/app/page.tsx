@@ -151,6 +151,47 @@ export default function Home() {
       //   title: `${locales("WorldCup", lang)} 1991`
       // }
     ],
+  },
+  {
+    title: `${locales("EuroMen", lang)}`,
+    editions: [
+      {
+        link: "/euromen/2024",
+        title: `${locales("Euro", lang)} 2024`
+      }
+      // {
+      //   link: "/worldcupwomen/2019",
+      //   title: `${locales("WorldCup", lang)} 2019`
+      // },
+      // {
+      //   link: "/worldcupwomen/2015",
+      //   title: `${locales("WorldCup", lang)} 2015`
+      // },
+      // {
+      //   link: "/worldcupwomen/2011",
+      //   title: `${locales("WorldCup", lang)} 2011`
+      // },
+      // {
+      //   link: "/worldcupwomen/2007",
+      //   title: `${locales("WorldCup", lang)} 2007`
+      // },
+      // {
+      //   link: "/worldcupwomen/2003",
+      //   title: `${locales("WorldCup", lang)} 2003`
+      // }
+      // {
+      //   link: "/worldcupwomen/1999",
+      //   title: `${locales("WorldCup", lang)} 1999`
+      // },
+      // {
+      //   link: "/worldcupwomen/1995",
+      //   title: `${locales("WorldCup", lang)} 1995`
+      // },
+      // {
+      //   link: "/worldcupwomen/1991",
+      //   title: `${locales("WorldCup", lang)} 1991`
+      // }
+    ],
   }
 ]
   return (
