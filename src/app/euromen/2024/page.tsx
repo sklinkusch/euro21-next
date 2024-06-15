@@ -57,7 +57,7 @@ function Euro2024() {
         </main>
       </header>
       {matches.hasOwnProperty("champion") && matches.champion && <h2 className={styles.h2}>
-        {locales("WChampion", lang)}: <FlagSet code={matches.champion} large={true} />
+        {locales("EChampion", lang)}: <FlagSet code={matches.champion} large={true} />
       </h2>}
       <div className={styles.linkcontainer}>
         <Link href="/" className={styles.link}>{locales("Back", lang)}</Link>
