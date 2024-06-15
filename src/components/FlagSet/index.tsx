@@ -20,33 +20,6 @@ export function FlagWrapper({ team, participant, large = false }: FlagWrapperPro
     }
   },[])
   switch(team) {
-    case "Q1":
-      return (
-      <>
-        <Flag code='GB-WLS' alt={participantName("GB-WLS", lang)} title={participantName("GB-WLS", lang)} className={className} />
-        <Flag code='FI' alt={participantName("FI", lang)} title={participantName("FI", lang)} className={className} />
-        <Flag code='PL' alt={participantName("PL", lang)} title={participantName("PL", lang)} className={className} />
-        <Flag code='EE' alt={participantName("EE", lang)} title={participantName("EE", lang)} className={className} />
-      </>
-      )
-    case "Q2":
-      return (
-      <>
-        <Flag code='BH' alt={participantName("BH", lang)} title={participantName("BH", lang)} className={className} />
-        <Flag code='UA' alt={participantName("UA", lang)} title={participantName("UA", lang)} className={className} />
-        <Flag code='IL' alt={participantName("IL", lang)} title={participantName("IL", lang)} className={className} />
-        <Flag code='IS' alt={participantName("IS", lang)} title={participantName("IS", lang)} className={className} />
-      </>
-      )
-    case "Q3":
-      return (
-      <>
-        <Flag code='GE' alt={participantName("GE", lang)} title={participantName("GE", lang)} className={className} />
-        <Flag code='LU' alt={participantName("LU", lang)} title={participantName("LU", lang)} className={className} />
-        <Flag code='GR' alt={participantName("GR", lang)} title={participantName("GR", lang)} className={className} />
-        <Flag code='KZ' alt={participantName("KZ", lang)} title={participantName("KZ", lang)} className={className} />
-      </>
-      )
     case "GB-NIR":
       return <Image src={GB_NIR} alt={participant} title={participant} className={className} />
     case "CS":
