@@ -38,7 +38,7 @@ function GroupMatchList({ matches, number, identifier }: GroupMatchListProp) {
       <table className={styles.table}>
         <tbody>
           {matches.map((match, index) =>{
-            const { teams, goals, date, place } = match 
+            const { teams, goals, date, place, live } = match 
             const [teamA, teamB] = teams 
             const [goalsA, goalsB] = goals
             const aGoals = typeof goalsA === "number" ? `${goalsA}` : "-"
@@ -59,7 +59,13 @@ function GroupMatchList({ matches, number, identifier }: GroupMatchListProp) {
                 <tr className={styles.row}>
                   <td className={styles.flag}><FlagWrapper team={teamA} participant={aParticipants} /></td>
                   <td className={styles.flag}><FlagWrapper team={teamB} participant={bParticipants} /></td>
-                  {typeof goalsA === 'number' && typeof goalsB === 'number' ? (<td className={styles.resultcell}><span className={styles.span}>{`${aGoals}:${bGoals}`}</span></td>) : formattedDate ? (<td className={styles.resultcell}><span className={styles.span}>{formattedDate}</span></td>) : (<td className={styles.resultcell}><span className={styles.span}>-:-</span></td>)}
+                  {typeof goalsA === 'number' && typeof goalsB === 'number' 
+                    ? live
+                      ? (<td className={styles.resultcell}><span className={styles.boldspan}>{`${aGoals}:${bGoals}`}</span></td>) 
+                      : (<td className={styles.resultcell}><span className={styles.span}>{`${aGoals}:${bGoals}`}</span></td>) 
+                    : formattedDate 
+                      ? (<td className={styles.resultcell}><span className={styles.span}>{formattedDate}</span></td>) 
+                      : (<td className={styles.resultcell}><span className={styles.span}>-:-</span></td>)}
                 </tr>
               </React.Fragment>
             )
