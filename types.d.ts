@@ -11,6 +11,7 @@ type SingleMatch = {
   date: string
   fairPlay: (number | null)[]
   place?: Place
+  live?: boolean
 }
 
 type KOMatch = {
@@ -19,6 +20,7 @@ type KOMatch = {
   add: string | null
   date: string
   place?: Place
+  live?: boolean
 }
 
 // Table
