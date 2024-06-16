@@ -103,3 +103,8 @@
   line-height: 16px;
   color: black;
 }
+
+.boldspan {
+  composes: span;
+  font-weight: 700;
+}
