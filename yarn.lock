@@ -189,10 +189,10 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react-world-flags@^1.4.5":
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/@types/react-world-flags/-/react-world-flags-1.4.5.tgz#352f8e54807b81c064116f927dd799b95ea36a58"
-  integrity sha512-BW10gS64/FXRizBxuHeGEEl2KgljdYAe+tF4Mq3jpoWeuhZNXJOSuVrEvFY0+jrpoMOK3ER28OMgLR0oPgY2og==
+"@types/react-world-flags@^1.6.0":
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@types/react-world-flags/-/react-world-flags-1.6.0.tgz#13b4e29f516653f7e237e171088543d066726f34"
+  integrity sha512-j/uVy2fnG8gX3Ckic4sccYm9XjieasUsJDMqBDtdPdcwe3aFfz+iBbds+wxOiTzfe5BErVGjdFu6NO1hCg/7lw==
   dependencies:
     "@types/react" "*"
 
