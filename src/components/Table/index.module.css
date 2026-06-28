@@ -47,6 +47,26 @@
   background-color: #CACACA;
 }
 
+.table_8 {
+  composes: tablemain;
+  background-color: #B3C53F;
+}
+
+.table_9 {
+  composes: tablemain;
+  background-color: #3481B8;
+}
+
+.table_10 {
+  composes: tablemain;
+  background-color: #CB8D73;
+}
+
+.table_11 {
+  composes: tablemain;
+  background-color: #FFA421;
+}
+
 .tablethird {
   composes: tablemain;
   background-color: #78C5FC;

@@ -80,6 +80,15 @@
 		"pl": "Bułgaria",
 		"pt": "Bulgária"
 	},
+	"BO": {
+		"de": "Bolivien",
+		"en": "Bolivia",
+		"es": "Bolívia",
+		"fr": "Bolivie",
+		"it": "Bolivia",
+		"pl": "Boliwia",
+		"pt": "Bolívia"
+	},
 	"BR": {
 		"de": "Brasilien",
 		"en": "Brazil",
@@ -97,6 +106,15 @@
 		"it": "Canada",
 		"pl": "Kanada",
 		"pt": "Canadá"
+	},
+	"CD": {
+		"de": "Demokratische Republik Kongo",
+		"en": "Democratic Republic of the Congo",
+		"es": "República Democrática del Congo",
+		"fr": "République démocratique du Congo",
+		"it": "Repubblica Democratica del Congo",
+		"pl": "Demokratyczna Republika Konga",
+		"pt": "República Democrática do Congo"
 	},
 	"CH": {
 		"de": "Schweiz",
@@ -169,6 +187,24 @@
 		"it": "Cecoslovacchia",
 		"pl": "Czechosłowacja",
 		"pt": "Checoslováquia"
+	},
+	"CV": {
+		"de": "Kap Verde",
+		"en": "Cape Verde",
+		"es": "Cabo Verde",
+		"fr": "Cap-Vert",
+		"it": "Capo Verde",
+		"pl": "Republika Zielonego Przylądka",
+		"pt": "Cabo Verde"
+	},
+	"CW": {
+		"de": "Curaçao",
+		"en": "Curaçao",
+		"es": "Curazao",
+		"fr": "Curaçao",
+		"it": "Curaçao",
+		"pl": "Curaçao",
+		"pt": "Curaçau"
 	},
 	"CZ": {
 		"de": "Tschechien",
@@ -368,6 +404,15 @@
 		"pl": "Irlandia",
 		"pt": "Irlanda"
 	},
+	"IQ": {
+		"de": "Irak",
+		"en": "Iraq",
+		"es": "Irak",
+		"fr": "Irak",
+		"it": "Iraq",
+		"pl": "Irak",
+		"pt": "Iraque"
+	},
 	"IR": {
 		"de": "Iran",
 		"en": "Iran",
@@ -403,6 +448,15 @@
 		"it": "Giamaica",
 		"pl": "Jamajka",
 		"pt": "Jamaica"
+	},
+	"JO": {
+		"de": "Jordanien",
+		"en": "Jordan",
+		"es": "Jordania",
+		"fr": "Jordanie",
+		"it": "Giordania",
+		"pl": "Jordania",
+		"pt": "Jordânia"
 	},
 	"JP": {
 		"de": "Japan",
@@ -466,6 +520,15 @@
 		"it": "Messico",
 		"pl": "Meksyk",
 		"pt": "México"
+	},
+	"NC": {
+		"de": "Neukaledonien",
+		"en": "New Caledonia",
+		"es": "Nueva Caledonia",
+		"fr": "Nouvelle-Calédonie",
+		"it": "Nuova Caledonia",
+		"pl": "Nowa Kaledonia",
+		"pt": "Nova Caledónia"
 	},
 	"NG": {
 		"de": "Nigeria",
@@ -638,6 +701,15 @@
 		"pl": "Senegal",
 		"pt": "Senegal"
 	},
+	"SR": {
+		"de": "Suriname",
+		"en": "Suriname",
+		"es": "Surinam",
+		"fr": "Suriname",
+		"it": "Suriname",
+		"pl": "Surinam",
+		"pt": "Suriname"
+	},
 	"SU": {
 		"de": "Sowjetunion",
 		"en": "Soviet Union",
@@ -736,6 +808,15 @@
 		"it": "Vietnam",
 		"pl": "Wietnam",
 		"pt": "Vietnã"
+	},
+	"XK": {
+		"de": "Kosovo",
+		"en": "Kosovo",
+		"es": "Kosovo",
+		"fr": "Kosovo",
+		"it": "Kosovo",
+		"pl": "Kosowo",
+		"pt": "Kosovo"
 	},
 	"YU-BR": {
 		"de": "Jugoslawien",

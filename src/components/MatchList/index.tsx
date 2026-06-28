@@ -46,7 +46,11 @@ function GroupMatchList({ matches, number, identifier }: GroupMatchListProp) {
             const aParticipants = participants(teamA, lang) ? participants(teamA, lang) : teamA
             const bParticipants = participants(teamB, lang) ? participants(teamB, lang) : teamB
             const tz = Intl.DateTimeFormat().resolvedOptions().timeZone
-            const formattedDate = date ? new Date(date).toLocaleString(lang, { year: "2-digit", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: tz }) : null
+            const formattedDate = date 
+              ? date.includes("T")
+                ? new Date(date).toLocaleString(lang, { year: "2-digit", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", timeZone: tz }) 
+                : new Date(date).toLocaleDateString(lang, { year: '2-digit', month: '2-digit', day: '2-digit', timeZone: tz })
+              : null
             return (
               <React.Fragment key={index}>
                 {place && (<tr className={styles.smallrow}>

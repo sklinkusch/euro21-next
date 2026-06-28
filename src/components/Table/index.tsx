@@ -103,6 +103,18 @@ function NewTable ({ table, number, notifier }: TableProps) {
     case 7:
       className = styles.table_7 
       break 
+    case 8:
+      className = styles.table_8 
+      break
+    case 9:
+      className = styles.table_9 
+      break
+    case 10:
+      className = styles.table_10 
+      break 
+    case 11:
+      className = styles.table_11 
+      break 
     default:
       className = styles.tablemain
   }

@@ -20,6 +20,58 @@ export function FlagWrapper({ team, participant, large = false }: FlagWrapperPro
     }
   },[])
   switch(team) {
+    case "Q1":
+      return (
+      <>
+        <Flag code="GB-WLS" alt={participantName("GB-WLS", lang)} title={participantName("GB-WLS", lang)} className={className} />
+        <Flag code="BA" alt={participantName("BA", lang)} title={participantName("BA", lang)} className={className} />
+        <Flag code="IT" alt={participantName("IT", lang)} title={participantName("IT", lang)} className={className} />
+        <Image src={GB_NIR} alt={participantName("GB-NIR", lang)} title={participantName("GB-NIR", lang)} className={className} />
+      </>
+      );
+    case "Q2":
+      return (
+        <>
+          <Flag code="UA" alt={participantName("UA", lang)} title={participantName("UA", lang)} className={className} />
+          <Flag code="SE" alt={participantName("SE", lang)} title={participantName("SE", lang)} className={className} />
+          <Flag code="PL" alt={participantName("PL", lang)} title={participantName("PL", lang)} className={className} />
+          <Flag code="AL" alt={participantName("AL", lang)} title={participantName("AL", lang)} className={className} />
+        </>
+      );
+    case "Q3":
+      return (
+        <>
+          <Flag code="SK" alt={participantName("SK", lang)} title={participantName("SK", lang)} className={className} />
+          <Flag code="XK" alt={participantName("XK", lang)} title={participantName("XK", lang)} className={className} />
+          <Flag code="TR" alt={participantName("TR", lang)} title={participantName("TR", lang)} className={className} />
+          <Flag code="RO" alt={participantName("RO", lang)} title={participantName("RO", lang)} className={className} />
+        </>
+      );
+    case "Q4":
+      return (
+        <>
+          <Flag code="CZ" alt={participantName("CZ", lang)} title={participantName("CZ", lang)} className={className} />
+          <Flag code="IE" alt={participantName("IE", lang)} title={participantName("IE", lang)} className={className} />
+          <Flag code="DK" alt={participantName("DK", lang)} title={participantName("DK", lang)} className={className} />
+          <Flag code="MK" alt={participantName("MK", lang)} title={participantName("MK", lang)} className={className} />
+        </>
+      );
+    case "Q5":
+      return (
+        <>
+          <Flag code="NC" alt={participantName("NC", lang)} title={participantName("NC", lang)} className={className} />
+          <Flag code="JM" alt={participantName("JM", lang)} title={participantName("JM", lang)} className={className} />
+          <Flag code="CD" alt={participantName("CD", lang)} title={participantName("CD", lang)} className={className} />
+        </>
+      );
+    case "Q6":
+      return (
+        <>
+          <Flag code="BO" alt={participantName("BO", lang)} title={participantName("BO", lang)} className={className} />
+          <Flag code="SR" alt={participantName("SR", lang)} title={participantName("SR", lang)} className={className} />
+          <Flag code="IQ" alt={participantName("IQ", lang)} title={participantName("IQ", lang)} className={className} />
+        </>
+      );
     case "GB-NIR":
       return <Image src={GB_NIR} alt={participant} title={participant} className={className} />
     case "CS":

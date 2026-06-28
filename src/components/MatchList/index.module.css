@@ -19,7 +19,7 @@
   }
 }
 
-.group_0, .group_1, .group_2, .group_3, .group_4, .group_5, .group_6, .group_7 {
+.group_0, .group_1, .group_2, .group_3, .group_4, .group_5, .group_6, .group_7, .group_8, .group_9, .group_10, .group_11 {
   width: 100%;
   margin: 4px;
   padding: 2px;
@@ -57,6 +57,22 @@
 
 .group_7 {
   background-color: #CACACA;
+}
+
+.group_8 {
+  background-color: #B3C53F
+}
+
+.group_9 {
+  background-color: #3481B8;
+}
+
+.group_10 {
+  background-color: #CB8D73;
+}
+
+.group_11 {
+  background-color: #FFA421;
 }
 
 .identifier {

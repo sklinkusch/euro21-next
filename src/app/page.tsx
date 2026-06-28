@@ -74,6 +74,10 @@ export default function Home() {
     title: `${locales("WCMen", lang)}`,
     editions: [
       {
+        link: "/worldcupmen/2026",
+        title: `${locales("WorldCup", lang)} 2026`
+      },
+      {
         link: "/worldcupmen/2022",
         title: `${locales("WorldCup", lang)} 2022`
       },
