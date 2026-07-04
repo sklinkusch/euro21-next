@@ -46,8 +46,8 @@ function WorldCup2026() {
           {matches.hasOwnProperty("groups") && matches.groups && (<GeneralTableSet matches={matches.groups} />)}
           <div className={styles.finalgrid}>
             {matches.hasOwnProperty("T3") && matches.T3 && <TableThird third={matches.T3} emax={7} maxColumns={4} />}
-            {matches.hasOwnProperty("SF") && matches.SF && (<KnockoutRound title={localeName("Round32", lang)} matches={matches.SF} maxColumn={2} />)}
-            {matches.hasOwnProperty("AF") && matches.AF && (<Achtelfinale matches={matches.AF} />)}
+            {matches.hasOwnProperty("SF") && matches.SF && (<KnockoutRound title={localeName("Round32", lang)} matches={matches.SF} />)}
+            {matches.hasOwnProperty("AF") && matches.AF && (<KnockoutRound title={localeName("Round16", lang)} matches={matches.AF} />)}
             {matches.hasOwnProperty("VF") && matches.VF && (<Viertelfinale matches={matches.VF} maxColumns={4} />)}
             {matches.hasOwnProperty("HF") && matches.HF && (<Halbfinale matches={matches.HF} />)}
             {matches.hasOwnProperty("3P") && matches["3P"] && (<Platz3 match={matches["3P"]} />)}

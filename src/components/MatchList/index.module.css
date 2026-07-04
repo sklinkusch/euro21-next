@@ -1,6 +1,6 @@
 .matchList {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
 }
 
 .matchList_1, .matchList_2, .matchList_3, .matchList_4 {

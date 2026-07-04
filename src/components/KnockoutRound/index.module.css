@@ -45,10 +45,28 @@
   font-size: 14px;
 }
 
-.flexhalf {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
+@media screen and (max-width: 599px) {
+  .flexone {
+    display: block;
+    width: 100%;
+  }
+  .flexhalf {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .flexone {
+    display: none;
+    width: 100%;
+  }
+  .flexhalf {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
 }
 
 .smallrow {
