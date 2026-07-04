@@ -45,27 +45,29 @@
   font-size: 14px;
 }
 
-@media screen and (max-width: 599px) {
-  .flexone {
-    display: block;
-    width: 100%;
-  }
-  .flexhalf {
-    display: none;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
-  }
+.flexone_sm {
+  display: block;
+  width: 100%;
+}
+.flexone_md {
+  display: none;
+}
+.flexone {
+  display: block;
+  width: 100%;
+}
+.flexhalf {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
 }
 
 @media screen and (min-width: 600px) {
-  .flexone {
+  .flexone_sm {
     display: none;
-    width: 100%;
   }
-  .flexhalf {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
+  .flexone_md {
+    display: block;
   }
 }
 

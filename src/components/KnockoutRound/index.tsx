@@ -19,7 +19,7 @@ function KnockoutRound ({title, matches }: KnockoutRoundProps) {
   let gridColumn = styles.AF4
   const isEven = matches.length % 2 === 0;
   const length = isEven ? matches.length / 2 : (matches.length + 1) / 2;
-  const arrangement: (number | null)[][] = new Array(matches.length).fill("").map((_item, index) => {
+  const arrangement: (number | null)[][] = new Array(length).fill("").map((_item, index) => {
     if (isEven) {
       return [index, length + index];
     } else if ((length + index) < matches.length) {
@@ -33,9 +33,9 @@ function KnockoutRound ({title, matches }: KnockoutRoundProps) {
       <h3 className={styles.h3}>
         {title}
       </h3>
-      <div className={styles.flexhalf}>
+      <div className={styles.flexone_md}>
         {arrangement.map((matchup, i) => (
-            <div key={i}>
+            <div key={i} className={styles.flexhalf}>
               <table className={styles.table}>
                 <tbody>
                   {Array.isArray(matchup) && 
@@ -53,15 +53,15 @@ function KnockoutRound ({title, matches }: KnockoutRoundProps) {
             </div> 
         ))}
       </div>
-      <div className={styles.flexone}>
+      <div className={styles.flexone_sm}>
         {matches.map((matchup, i) => (
-          <>
+          <div key={i} className={styles.flexone}>
             <table className={styles.table}>
               <tbody>
                 <AchtelfinaleSingle match={matchup} />
               </tbody>
             </table>
-          </> 
+          </div> 
         ))}
       </div>
     </div>
