@@ -59,6 +59,7 @@ type Matches = {
   host?: string[]
   groups?: { [key: string]: Group}
   T3?: Dataset3[]
+  T3Max?: number
   SF?: KOMatch[]
   AF?: KOMatch[]
   VF?: KOMatch[]
